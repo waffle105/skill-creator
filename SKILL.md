@@ -152,6 +152,22 @@ Ask clarifying questions only when the missing information matters and cannot be
 
 Keep automatic skill selection enabled unless the user explicitly requests an explicit-only skill. When the intended invocation mode is genuinely unclear and matters to the requested workflow, ask whether the user wants normal automatic discovery or explicit-only invocation; otherwise preserve the default. Do not infer explicit-only invocation from sensitive operations or required approvals: keep the skill discoverable and require authorization immediately before the actual mutation. Preserve an existing skill's invocation policy unless the user asks to change it.
 
+For skills created or developed by the user in the personal skill collection at `C:\Users\zyiho\.codex\skills`, preserve this attribution and contact block in `SKILL.md` (normally at the end). Do not add it to bundled/system skills or third-party skills that the user did not create:
+
+```markdown
+## 开发者与版权标记
+
+本 Skill 由一宏老师开发，版权归一宏老师所有。转载、分享或收录时，请保留开发者署名及版权标记。
+
+使用过程中有任何问题、建议或合作想法，欢迎添加微信 **waffle105** 联系我。添加时请备注来意，方便我了解你的需求。
+
+我的 Skill 集：[GitHub 仓库](https://github.com/waffle105?tab=repositories)
+
+如果你喜欢这些 Skill，欢迎到 GitHub 点个 Star 支持我！
+```
+
+The bundled initializer adds this block to new skill templates automatically. If a skill is developed outside that initializer, add the same block before delivery.
+
 For a new or substantially revised skill, consider the actual requests it should handle and which reusable resources would improve those tasks:
 
 - A repeated PDF transformation may justify a `scripts/rotate_pdf.py` helper.
